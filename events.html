@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--//DOM - Document Object Model-->
+<!--//getElementByClassName-->
+<!--//getElementByTagName-->
+<p>Hi there</p>
+<script type="application/javascript">
+    var a = document.getElementsByTagName('p');
+    for (var x = 0; a < a.length; x++){
+
+    }
+      document.write(a[x].innerHTML = "Hello" + '<br>')
+
+</script>
+
+<!--//getElementById-->
+<div id="demo" style="width: 200px;">text</div>
+<script type="application/javascript">
+    var b = document.getElementById('demo');
+    b.style.color = "red";
+</script>
+
+<!--adding elements-->
+<script>
+    var c = document.createElement('p');
+    var node = document.createTextNode('Addition paragraph');
+    c.appendChild(node);
+
+    var div = document.getElementById('demo');
+    div.appendChild(c);
+//    replacechild
+//    removechild
+
+</script>
+
+<!--handling events-->
+<button onclick="show()">Click here</button>
+<script>
+    function show() {
+        alert('hi person')
+    }
+</script>
+
+<!--event listeners-->
+<button id="dem"></button>
+<script>
+    var btn = document.getElementById('dem');
+    btn.addEventListener('click', myfuction);
+
+    function myfuction() {
+        alert(Math.random());
+        btn.removeEventListener('click', myfuction)
+    }
+</script>
+</body>
+</html>

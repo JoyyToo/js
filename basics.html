@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="application/javascript">
+    document.write('Hello world<br>');
+    let a = 10;
+    let b = 10;
+    let c = b + a;
+    document.write(c + '<br>');
+    let x = 100/ 5;
+    document.write(x +'<br>');
+    let result = 20;
+    result *= 5;
+    q = result < c;
+    document.write(result +'<br>');
+    document.write(q + '<br>');
+
+    //conditional statements
+    let age = 19;
+    if (age >= 18 )
+    {
+        document.write('<h1>can vote</h1><br>')
+    }
+    else {
+        document.write('cannot vote<br>')
+    }
+
+    // switch
+    let s = 4;
+    switch (s){
+        case 1:
+            document.write('Monday');
+            break;
+        case 2:
+            document.write('Tuesday');
+            break;
+        default:
+            document.write('Unknown<br>');
+    }
+
+    // loops
+    // for
+    for(let z = 1; z <10; z++){
+        document.write(z + '<br>')
+    }
+
+    // while
+    let f = 1;
+    while (f < 5){
+        document.write(f + '<br>');
+        f++;
+    }
+
+    // do...while
+    do{
+        document.write(f + '<br>');
+        f++;
+    }
+    while (f< 10);
+
+    //functions
+    function sum(num1,num2) {
+        return num1 + num2;
+    }
+    document.write(sum(2, 4+ '<br>'));
+
+    function details(name, age) {
+        document.write(`My name is ${name} and I am ${age}`+ '<br>');
+    }
+    details('Joy', 20);
+
+    // objects
+    // dictionaries in python
+    let person = {
+        name: 'Joy',
+        age: 20,
+        weight : 60
+    };
+    document.write(person['name']);
+    document.write(person.name);
+    document.write(person.name.length);
+
+    function Human(name) {
+        this.name = name;
+        // adding methods
+        this.changeName =function (name) {
+            this.name = name;
+
+        }
+
+    }
+    let p1 = new Human('J');
+    p1.changeName('Too');
+    document.write(p1.name + '<br>');
+
+    // core objects
+        // Arrays
+    // lists in python
+    let courses = new Array('html','css', 'js');
+    document.write(courses[1] + '<br>');
+    courses[4] = 'go';
+    document.write(courses + '<br>');
+
+    let nums = [1, 2, 3];
+    document.write(nums + '<br>');
+    document.write(nums.length + '<br>');
+
+    let tot = courses.concat(nums);
+    document.write(tot + '<br>');
+
+    // The math object
+    document.write(Math.PI + '<br>');
+    let sq = Math.sqrt(16);
+    document.write(sq + '<br>');
+
+    let n = prompt("Enter a number");
+    let answer = Math.sqrt(n);
+    document.write(answer + '<br>');
+
+    //DateTime object
+//    function myAlert() {
+//        alert('sasa');
+//    }
+//    document.write(setInterval(myAlert, 4000));
+
+    let d1 = new Date(84600000);
+    document.write(d1 + '<br>');
+
+    let d2 = new Date("November 28, 2017 6:42:00");
+    document.write(d2 + '<br>');
+    document.write(d2.getHours() + '<br>');
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    #container {
+        width: 200px;
+        height: 200px;
+        background: green;
+        position: relative;
+    }
+    #box {
+        width: 50px;
+        height: 50px;
+        background: red;
+        position: absolute;
+    }
+</style>
+<div id="container">
+    <div id="box"> </div>
+</div>
+<script>
+    let t = setInterval(move, 10);
+
+    let pos = 0; // starting position
+    let box = document.getElementById('box');
+
+    function move() {
+        if (pos >= 150){
+            clearInterval(t)
+        }
+        else {
+            pos += 1;
+            box.style.left = pos + 'px';
+        }
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <button onclick="prev()">Prev</button>
+    <img id="slider" src="l1.png" width="200px;" height="100px;">
+    <button onclick="next()">Next</button>
+</div>
+<script>
+    let images = [
+        'l1.png',
+        'l2.png',
+        'l3.png'
+    ];
+    let num = 0;
+    function next() {
+        let slider = document.getElementById('slider');
+        num++;
+        if(num >= images.length){
+            num = 0;
+        }
+        slider.src = images[num];
+    }
+
+
+    function prev() {
+        let slider = document.getElementById('slider');
+        num--;
+        if(num < 0){
+            num = images.length-1;
+        }
+        slider.src = images[num];
+    }
+</script>
+
+</body>
+</html>
